@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: smc-powerhouse-engine
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PYTHON_UNBUFFERED
+        value: "1"
+        
